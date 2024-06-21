@@ -51,19 +51,19 @@ public class LevelSelectionActivity extends AppCompatActivity {
         level4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Nivel bloqueado",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Proximamente",Toast.LENGTH_LONG).show();
             }
         });
         level5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Nivel bloqueado",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Proximamente",Toast.LENGTH_LONG).show();
             }
         });
         level6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Nivel bloqueado",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Proximamente",Toast.LENGTH_LONG).show();
             }
         });
 

@@ -35,18 +35,19 @@
            app:srcCompat="@drawable/goal" />
 
        <ImageView
-           android:layout_width="256dp"
-           android:layout_height="46dp"
-           android:rotation="60"
+           android:id="@+id/obstacle1"
+           android:layout_width="46dp"
+           android:layout_height="256dp"
+           android:rotation="-20"
            android:scaleType="fitXY"
-           android:layout_marginStart="85dp"
-           android:layout_marginBottom="362dp"
+           android:layout_marginStart="210dp"
+           android:layout_marginBottom="262dp"
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:srcCompat="@drawable/obstacle" />
 
        <ImageView
-           android:id="@+id/imageView2"
+           android:id="@+id/obstacle2"
            android:layout_width="256dp"
            android:layout_height="46dp"
            android:layout_marginStart="0dp"
@@ -94,9 +95,15 @@
                 android:id="@+id/button_continue"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/button_next"
+                android:text="Next"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="Continue"
-                app:icon="@drawable/logo" />
+                android:visibility="gone"
+                />
 
             <Button
                 android:id="@+id/button_restart"

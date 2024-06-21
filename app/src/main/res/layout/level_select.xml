@@ -138,9 +138,9 @@
                     android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="150dp"
-                    android:text="Bloqueado"
+                    android:text="Proximamente"
                     android:textAlignment="center"
-                    android:textSize="28dp" />
+                    android:textSize="23dp" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -170,9 +170,9 @@
                     android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="150dp"
-                    android:text="Bloqueado"
+                    android:text="Proximamente"
                     android:textAlignment="center"
-                    android:textSize="28dp" />
+                    android:textSize="23dp" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -202,9 +202,9 @@
                     android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="150dp"
-                    android:text="Bloqueado"
+                    android:text="Proximamente"
                     android:textAlignment="center"
-                    android:textSize="28dp" />
+                    android:textSize="23dp" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>

@@ -89,10 +89,15 @@
                 android:id="@+id/button_continue"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/button_next"
+                android:text="Next"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="Continue"
-                android:textColorLink="#FFFFFF"
-                app:icon="@drawable/logo" />
+                android:visibility="gone"
+                />
 
             <Button
                 android:id="@+id/button_restart"
