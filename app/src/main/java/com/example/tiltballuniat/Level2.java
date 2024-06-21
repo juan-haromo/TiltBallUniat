@@ -1,6 +1,7 @@
 package com.example.tiltballuniat;
-
+// librerias
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.hardware.SensorEventListener;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
 import android.widget.ImageView;
 
-
+// creamos la clase principal
 public class Level2 extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager sensorManager;
@@ -47,6 +48,7 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.level2);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -69,6 +71,7 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
+        // uso del boton menu
         button_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +80,8 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
                 isPlaying = false;
             }
         });
+
+        // uso de boton continuar
         button_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,6 +90,7 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
                 isPlaying = true;
             }
         });
+        // uso de boton restart
         button_restart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,6 +98,7 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
                 startActivity(getIntent());
             }
         });
+        // uso de boton home
         button_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,6 +106,7 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
                 startActivity(load);
             }
         });
+        // uso de boton next
         button_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,18 +116,21 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
         });
     }
 
+    // continua la aplicacion cuando regresas y vuelve a tomar el sensor
     @Override
     protected void onResume() {
         super.onResume();
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_GAME);
     }
 
+    // pausa la aplicacion cuando te sales y libera el sensor
     @Override
     protected void onPause() {
         super.onPause();
         sensorManager.unregisterListener(this);
     }
 
+    // revisa si cambio algo en el sensor
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER && isPlaying) {
@@ -136,6 +147,7 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
         // No se necesita implementar nada aquí para este ejemplo
     }
 
+    // actualiza la posicion del jugador
     private void updatePlayerPosition() {
         float x = player.getX() - xAcceleration * 2;
         float y = player.getY() + yAcceleration * 2;
@@ -150,6 +162,7 @@ public class Level2 extends AppCompatActivity implements SensorEventListener {
         player.setY(y);
     }
 
+    // revisa las colisiones
     private void checkCollisions() {
         // Rectángulos de colisión para el jugador, meta y obstáculos
         Rect playerRect = new Rect((int) player.getX(), (int) player.getY(), (int) player.getX() + player.getWidth(), (int) player.getY() + player.getHeight());
