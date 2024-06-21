@@ -76,7 +76,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="#66000000"
+            android:background="#4DFF5722"
             android:backgroundTintMode="screen"
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -87,21 +87,24 @@
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="Continue" />
+                android:text="Continue"
+                app:icon="@drawable/logo" />
 
             <Button
                 android:id="@+id/button_restart"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="100dp"
-                android:text="Restart" />
+                android:text="Restart"
+                app:icon="@drawable/logo" />
 
             <Button
                 android:id="@+id/button_home"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="170dp"
-                android:text="Home" />
+                android:text="Home"
+                app:icon="@drawable/logo" />
 
         </RelativeLayout>
     </RelativeLayout>
