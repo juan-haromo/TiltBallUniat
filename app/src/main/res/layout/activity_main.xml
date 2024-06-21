@@ -9,45 +9,48 @@
     android:background="@drawable/background"
     >
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Uniat"
+        android:textAlignment="center"
+        android:textColor="#FF9800"
+        android:textSize="84sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="Uniat"
-            android:textAlignment="center"
-            android:textColor="#FF9800"
-            android:textSize="84sp"
-            android:textStyle="bold"
-            />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="TiltBall"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="63sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/start"
+        tools:layout_editor_absoluteX="0dp" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TiltBall"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="63sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/start"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="0dp"
-            android:text="Jugar"
-            android:textAlignment="center" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:paddingTop="0dp"
+        android:text="Jugar"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
