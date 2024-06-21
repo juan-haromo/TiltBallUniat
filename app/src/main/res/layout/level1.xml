@@ -8,8 +8,6 @@
     tools:context=".Level1"
     android:background="@drawable/background"
     >
-
-
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent">
@@ -87,6 +85,14 @@
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/button_next"
+                android:text="Next"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                />
 
             <Button
                 android:id="@+id/button_restart"
@@ -103,5 +109,4 @@
 
         </RelativeLayout>
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
