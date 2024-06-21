@@ -64,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
+            android:backgroundTint="#FF3D00"
             android:text="Menu" />
     </RelativeLayout>
 
@@ -89,21 +90,27 @@
                 android:id="@+id/button_continue"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FF3D00"
+                android:text="Continue"
+                app:icon="@drawable/logo" />
+
             <Button
                 android:id="@+id/button_next"
-                android:text="Next"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
+                android:backgroundTint="#FF3D00"
+                android:text="Next"
                 android:visibility="gone"
-                />
+                app:icon="@drawable/logo" />
 
             <Button
                 android:id="@+id/button_restart"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="100dp"
+                android:backgroundTint="#FF3D00"
                 android:text="Restart"
                 app:icon="@drawable/logo" />
 
@@ -112,6 +119,7 @@
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="170dp"
+                android:backgroundTint="#FF3D00"
                 android:text="Home"
                 app:icon="@drawable/logo" />
 

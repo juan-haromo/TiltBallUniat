@@ -84,7 +84,7 @@ public class Level3 extends AppCompatActivity implements SensorEventListener {
             public void onClick(View v) {
                 menu.setVisibility(View.VISIBLE);
                 button_menu.setVisibility(View.GONE);
-                isPlaying = true;
+                isPlaying = false;
             }
         });
         button_continue.setOnClickListener(new View.OnClickListener() {
